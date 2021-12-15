@@ -1,0 +1,10 @@
+services:
+
+    my_bundle.controller.my_controller:
+        class: MyBundle\Controller\MyController
+        arguments:
+            - '@router'
+        calls:
+            - [setContainer, ['@service_container']]
+        tags:
+            - 'controller.service_arguments'

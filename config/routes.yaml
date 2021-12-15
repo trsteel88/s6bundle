@@ -5,3 +5,8 @@ controllers:
 kernel:
     resource: ../src/Kernel.php
     type: annotation
+
+my-bundle:
+    resource: '@MyBundle/Resources/config/routes.yaml'
+    #path: /my
+    #controller: my_bundle.controller.my_controller::index

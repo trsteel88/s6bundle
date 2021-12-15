@@ -1,0 +1,4 @@
+my-bundle:
+    path: /my
+    controller: my_bundle.controller.my_controller::index
+    
