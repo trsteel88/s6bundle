@@ -10,12 +10,14 @@ use Symfony\Component\Routing\RouterInterface;
 
 class MyController extends AbstractController
 {
-  public function __construct(private RouterInterface $router)
-  {
+    public function __construct(private RouterInterface $router)
+    {
 
-  }
+    }
     public function index(Request $request, EntityManagerInterface $em) : Response
     {
-        return new Response('My Bundle Controller ' . get_class($em) . ' ' . get_class($this->router));
+        $url = $this->generateUrl('my-bundle');
+
+        return new Response('My Bundle Controller ' . get_class($em) . ' ' . get_class($this->router) . ' ' . $url);
     }
 }
