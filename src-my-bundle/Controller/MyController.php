@@ -16,6 +16,8 @@ class MyController extends AbstractController
     }
     public function index(Request $request, EntityManagerInterface $em) : Response
     {
+
+
         $url = $this->generateUrl('my-bundle');
 
         return new Response('My Bundle Controller ' . get_class($em) . ' ' . get_class($this->router) . ' ' . $url);
